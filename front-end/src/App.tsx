@@ -1,10 +1,12 @@
+import { Navigate, Outlet } from "react-router-dom"
 
-function App() {
-
+const App = () => {
+  const logout = () => {
+    localStorage.clear()
+    return <Navigate to='/login' />
+  }
   return (
-    <>
-      
-    </>
+    <Outlet />
   )
 }
 
