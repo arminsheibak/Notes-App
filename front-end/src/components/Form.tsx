@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import apiClient from "../services/apiClient";
 import { ACCESS_TOKEN, REFRESH_TOKEN } from "../constants";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 interface Props {
   route: string;
@@ -46,7 +46,7 @@ const Form = ({ route, method }: Props) => {
           {error}
         </div>
       )}
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} className="mb-3" >
         <h1>{name}</h1>
         <div className="mb-3">
           <label className="form-label" htmlFor="username">
@@ -82,6 +82,7 @@ const Form = ({ route, method }: Props) => {
           {name}
         </button>
       </form>
+      <Link to="/register">Don't have an account? Register now!</Link>
     </div>
   );
 };
