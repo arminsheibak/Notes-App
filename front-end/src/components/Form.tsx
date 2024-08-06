@@ -82,7 +82,7 @@ const Form = ({ route, method }: Props) => {
           {name}
         </button>
       </form>
-      <Link to="/register">Don't have an account? Register now!</Link>
+      {method == 'login' && <Link to="/register">Don't have an account? Register now!</Link>}
     </div>
   );
 };

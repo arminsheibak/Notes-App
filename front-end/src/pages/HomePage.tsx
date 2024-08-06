@@ -37,9 +37,10 @@ const HomePage = () => {
     const original_data = [...notes];
     setNotes([...notes, note]);
     apiClient
-      .post("/api/notes/", note)
-      .then((res) => {
-        setNotes([...original_data, res.data]);
+    .post("/api/notes/", note)
+    .then((res) => {
+      setNotes([...original_data, res.data]);
+      setNote({} as Note);
       })
       .catch((error) => {
         setError(error);
