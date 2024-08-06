@@ -1,6 +1,6 @@
 import { FormEvent, useEffect, useState } from "react";
 import apiClient from "../services/apiClient";
-import Accordion from 'react-bootstrap/Accordion';
+import Accordion from "react-bootstrap/esm/Accordion";
 
 interface Note {
   id: number;
